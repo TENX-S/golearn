@@ -6,12 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/sjwhitworth/golearn/base"
+	"os"
 )
 
 func main() {
 
 	// Load in the iris dataset
-	iris, err := base.ParseCSVToInstances("../datasets/iris_headers.csv", true)
+	iris, err := base.ParseCSVToInstances(os.Args[1], true)
 	if err != nil {
 		panic(err)
 	}
