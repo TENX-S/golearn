@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/sjwhitworth/golearn/base"
 	"github.com/sjwhitworth/golearn/evaluation"
@@ -9,7 +10,7 @@ import (
 )
 
 func main() {
-	rawData, err := base.ParseCSVToInstances("../datasets/iris_headers.csv", true)
+	rawData, err := base.ParseCSVToInstances(os.Args[1], true)
 	if err != nil {
 		panic(err)
 	}

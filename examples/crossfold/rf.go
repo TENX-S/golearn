@@ -9,6 +9,7 @@ import (
 	"github.com/sjwhitworth/golearn/evaluation"
 	"math"
 	"math/rand"
+	"os"
 )
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
 	var tree base.Classifier
 
 	// Load in the iris dataset
-	iris, err := base.ParseCSVToInstances("../datasets/iris_headers.csv", true)
+	iris, err := base.ParseCSVToInstances(os.Args[1], true)
 	if err != nil {
 		panic(err)
 	}

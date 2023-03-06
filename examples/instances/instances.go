@@ -5,12 +5,13 @@ package main
 import (
 	"fmt"
 	"github.com/sjwhitworth/golearn/base"
+	"os"
 )
 
 func main() {
 
 	// Instances can be read using ParseCsvToInstances
-	rawData, err := base.ParseCSVToInstances("../datasets/iris_headers.csv", true)
+	rawData, err := base.ParseCSVToInstances(os.Args[1], true)
 	if err != nil {
 		panic(err)
 	}

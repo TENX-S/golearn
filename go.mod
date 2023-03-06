@@ -10,3 +10,8 @@ require (
 	github.com/smartystreets/goconvey v1.6.4
 	gonum.org/v1/gonum v0.8.1
 )
+
+replace (
+	github.com/blend/go-sdk v1.1.1 => github.com/blend/go-sdk v0.0.0-20190205012150-4a150f307fcb
+	github.com/cnkei/gospline v0.0.0-20191204072713-842a72f86331 => github.com/cnkei/gospline v0.0.0-20191204052713-d67fac29a294
+)
